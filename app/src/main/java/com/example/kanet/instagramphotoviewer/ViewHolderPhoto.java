@@ -1,6 +1,7 @@
 package com.example.kanet.instagramphotoviewer;
 
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
@@ -11,4 +12,8 @@ public class ViewHolderPhoto {
     ImageView ivPhoto;
     TextView tvCountLike;
     TextView tvCaption;
+    TextView tvTimeStamp;
+    ImageView ivUserPicture;
+    TextView tvCountComment;
+    LinearLayout llComments;
 }

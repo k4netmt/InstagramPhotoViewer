@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">InstagramPhotoViewer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="CLIENT_ID">e05c462ebd86446ea48a5af73769b602</string>
 </resources>

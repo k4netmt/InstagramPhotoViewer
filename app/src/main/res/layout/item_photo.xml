@@ -1,44 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transitionGroup="false">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="username"
-        android:id="@+id/tvUsername"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/llgroupuser"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="fitXY"
+                app:riv_corner_radius="30dip"
+                app:riv_border_width="1dip"
+                app:riv_oval="false"
+                app:riv_border_color="@color/colorBorderUserPicture"
+                android:id="@+id/ivUserPicture"
+                android:src="@drawable/ic_launcher" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="username"
+                android:id="@+id/tvUsername" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/tvTimeStamp"
+
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="fitXY"
         android:id="@+id/ivPhoto"
-        android:layout_below="@+id/tvUsername"
+        android:foregroundGravity="center"
+        android:layout_below="@+id/llgroupuser"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="countlikes"
-        android:id="@+id/tvCountLike"
-        android:layout_below="@+id/ivPhoto"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="captions"
+        android:textSize="14sp"
         android:id="@+id/tvCaption"
-        android:layout_below="@+id/tvCountLike"
+        android:layout_below="@+id/ivPhoto"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCountLikes"
+            android:layout_below="@+id/tvCaption"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvCountLikes"
+        android:orientation="vertical"
+        android:id="@+id/llCommets">
+    </LinearLayout>
+
 </RelativeLayout>
